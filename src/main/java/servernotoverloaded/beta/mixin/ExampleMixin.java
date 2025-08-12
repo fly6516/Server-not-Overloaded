@@ -35,7 +35,7 @@ public abstract class ExampleMixin {
 				);
 
 				// 获取当前世界和位置
-				ServerWorld currentWorld = (ServerWorld) self.getWorld();
+				//ServerWorld currentWorld = (ServerWorld) self.getWorld();
 				BlockPos currentPos = self.getBlockPos();
 
 				// 将实体移到传送门下方（或偏移到旁边以防再次掉入）
@@ -46,7 +46,7 @@ public abstract class ExampleMixin {
 				);
 
 				// 阻止跨世界传送
-				cir.setReturnValue((Entity) self);
+				cir.setReturnValue(self);
 			}
 		}
 	}
